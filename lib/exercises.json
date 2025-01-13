@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "name": "Box Breathing",
+            "urlname": "box-breathing",
+            "benefits": [
+                "Enhances focus and calms the mind.",
+                "Reduces stress and promotes relaxation."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "time": 4,
+                    "text": "Inhale deeply through your nose for 4 seconds."
+                },
+                {
+                    "type": "hold",
+                    "time": 4,
+                    "text": "Hold your breath for 4 seconds."
+                },
+                {
+                    "type": "exhale",
+                    "time": 4,
+                    "text": "Exhale slowly through your mouth for 4 seconds."
+                },
+                {
+                    "type": "inhale",
+                    "time": 4,
+                    "text": "Hold your breath for 4 seconds."
+                }
+            ],
+            "color": "blue"
+        },
+        {
+            "name": "4-7-8 Breathing",
+            "urlname": "4-7-8-breathing",
+            "benefits": [
+                "Induces deep relaxation.",
+                "Helps you fall asleep faster.",
+                "Eases anxiety and stress."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "time": 4,
+                    "text": "Inhale deeply through your nose for 4 seconds."
+                },
+                {
+                    "type": "hold",
+                    "time": 7,
+                    "text": "Hold your breath for 7 seconds."
+                },
+                {
+                    "type": "exhale",
+                    "time": 8,
+                    "text": "Exhale slowly and fully through your mouth for 8 seconds."
+                }
+            ],
+            "color": "pink"
+        },
+        {
+            "name": "Resonant Breathing",
+            "urlname": "resonant-breathing",
+            "benefits": [
+                "Balances the nervous system.",
+                "Improves heart rate variability.",
+                "Ideal for calming and centering yourself."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "time": 5,
+                    "text": "Inhale for 5 seconds"
+                },
+                {
+                    "type": "exhale",
+                    "time": 5,
+                    "text": "Exhale for 5 seconds"
+                }
+            ],
+            "color": "green"
+        }
+    ]
+}
