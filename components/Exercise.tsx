@@ -4,6 +4,9 @@ import { ExerciseType, Step } from '@/lib/types'
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button'
 import * as motion from "motion/react-client"
+import { Slider } from "@/components/ui/slider"
+import FinishScreen from './FinishScreen'
+
 
 
 
@@ -16,9 +19,9 @@ const Exercise = ({ data }: { data: ExerciseType }) => {
     const [step, setStep] = useState(0)
     const [length, setLength] = useState(16)
     const [text, setText] = useState<string>(data.steps[0].text)
+    const [reps, setReps] = useState([10])
     const [scale, setScale] = useState<number>(1)
 
-    console.log(data.color)
 
     const handleBreathing = (step: Step) => {
         if (step.type === 'exhale') {
@@ -31,8 +34,13 @@ const Exercise = ({ data }: { data: ExerciseType }) => {
     }
 
     const handleStart = () => {
+        setLength(data.steps.length * reps[0])
         handleBreathing(data.steps[0])
         setStarted(true)
+    }
+
+    const handleValueChange = (newValue: number[]) => {
+        setReps(newValue)
     }
 
     useEffect(() => {
@@ -40,14 +48,13 @@ const Exercise = ({ data }: { data: ExerciseType }) => {
             console.log('test')
             const interval = setTimeout(() => {
                 if (length > step) {
-                    console.log('frode')
                     handleBreathing(data.steps[step % data.steps.length])
                 } else {
                     setFinished(true)
                     console.log('All done with your exercise')
 
                 }
-            }, data.steps[step % data.steps.length].time * 1000)
+            }, data.steps[(step - 1) % data.steps.length].time * 1000)
 
 
 
@@ -70,23 +77,25 @@ const Exercise = ({ data }: { data: ExerciseType }) => {
                             return <li className="text-sm md:text-base py-1" key={i}>• {step.text}</li>
                         })}
                     </ul>
-
+                    <div className="p-2 font-semibold text-xl">Repetitions: {reps}
+                        <Slider value={reps} className="p-4" onValueChange={handleValueChange} max={20} step={1} />
+                    </div>
                     <Button onClick={handleStart}>Start</Button>
                 </div>
             </div >
-                :
-                <motion.div className={`border-2 border-${data.color}-400 text-center flex items-center mt-32 mx-auto shadow-2xl dark:shadow-gray-200/20`}
-                    style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: "50%",
-
-
-                    }}
-                    animate={{ scale }} // Animate scale based on state
-                    transition={{ duration: 4, ease: "easeInOut" }} // Smooth easing 
-                >
-                    <h3 className="text-sm">{text}</h3> </motion.div >}
+                : !finished ?
+                    <motion.div className={`border-2 border-${data.color}-400 text-center text-xs justify-center flex items-center mt-32 mx-auto shadow-2xl dark:shadow-gray-200/20`}
+                        style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: "50%",
+                        }}
+                        animate={{ scale }}
+                        transition={{ duration: data.steps[(step - 1) % data.steps.length].time, ease: "easeInOut" }}
+                    >
+                        <h3 className="select-none">{text}</h3> </motion.div > :
+                    <FinishScreen data={data} />}
+            <h3>{step} / {length}</h3>
 
         </>
     )

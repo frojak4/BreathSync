@@ -14,7 +14,7 @@ console.log(data)
 
 const Menu = () => {
     return (
-        <Carousel className="mx-auto h-full w-3/5 md:w-3/6">
+        <Carousel className="mx-auto h-full w-3/5 md:w-3/6 lg:w-2/6">
             <CarouselContent className="-ml-4">
                 {data.data.map((data, i) => {
                     return <CarouselItem key={i} className="pl-4"> <MenuContent data={data} /></CarouselItem>
