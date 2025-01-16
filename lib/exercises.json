@@ -3,6 +3,7 @@
         {
             "name": "Box Breathing",
             "urlname": "box-breathing",
+            "tagline": "Quick and easy, reduces stress.",
             "benefits": [
                 "Enhances focus and calms the mind.",
                 "Reduces stress and promotes relaxation."
@@ -34,6 +35,7 @@
         {
             "name": "4-7-8 Breathing",
             "urlname": "4-7-8-breathing",
+            "tagline": "Perfect for sleep and relaxation.",
             "benefits": [
                 "Induces deep relaxation.",
                 "Helps you fall asleep faster.",
@@ -61,6 +63,7 @@
         {
             "name": "Resonant Breathing",
             "urlname": "resonant-breathing",
+            "tagline": "Steady and calming for balance.",
             "benefits": [
                 "Balances the nervous system.",
                 "Improves heart rate variability.",
@@ -79,6 +82,77 @@
                 }
             ],
             "color": "green"
+        },
+        {
+            "name": "Diaphragmatic Breathing",
+            "urlname": "diaphragmatic-breathing",
+            "tagline": "Deep and restorative for your core.",
+            "benefits": [
+                "Increases oxygen supply.",
+                "Reduces blood pressure and heart rate.",
+                "Improves core muscle stability."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "time": 4,
+                    "text": "Place one hand on your chest and the other on your abdomen, then inhale deeply through your nose."
+                },
+                {
+                    "type": "exhale",
+                    "time": 6,
+                    "text": "Exhale slowly through your mouth, feeling your abdomen fall."
+                }
+            ],
+            "color": "yellow"
+        },
+        {
+            "name": "Alternate Nostril Breathing",
+            "urlname": "alternate-nostril-breathing",
+            "tagline": "Balance your energy and calm your mind.",
+            "benefits": [
+                "Balances energy and calms the mind.",
+                "Improves focus and mental clarity.",
+                "Reduces stress and promotes relaxation."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "text": "Close your right nostril with your thumb and inhale deeply through your left nostril."
+                },
+                {
+                    "type": "exhale",
+                    "text": "Close your left nostril with your ring finger, release your thumb from your right nostril, and exhale."
+                },
+                {
+                    "type": "repeat",
+                    "text": "Repeat by alternating nostrils for 5–10 cycles."
+                }
+            ],
+            "color": "purple"
+        },
+        {
+            "name": "Pursed-Lip Breathing",
+            "urlname": "pursed-lip-breathing",
+            "tagline": "Simple and effective for airflow control.",
+            "benefits": [
+                "Improves lung function and airflow.",
+                "Helps manage shortness of breath.",
+                "Calms the nervous system."
+            ],
+            "steps": [
+                {
+                    "type": "inhale",
+                    "time": 2,
+                    "text": "Inhale deeply through your nose."
+                },
+                {
+                    "type": "exhale",
+                    "time": 4,
+                    "text": "Pucker your lips as if blowing out a candle and exhale slowly."
+                }
+            ],
+            "color": "orange"
         }
     ]
 }

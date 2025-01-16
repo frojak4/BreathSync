@@ -1,5 +1,5 @@
 
-type Step = {
+export type Step = {
     type: string,
     time: number,
     text: string
@@ -8,6 +8,7 @@ type Step = {
 export type ExerciseType = {
     name: string,
     urlname: string,
+    tagline: string,
     benefits: string[],
     steps: Step[],
     color: string
